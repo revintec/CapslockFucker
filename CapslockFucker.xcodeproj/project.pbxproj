@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11FB3ABD1A2FEFB3007DAA1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FB3ABC1A2FEFB3007DAA1B /* AppDelegate.m */; };
+		11FB3ABD1A2FEFB3007DAA1B /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FB3ABC1A2FEFB3007DAA1B /* Application.m */; };
 		11FB3ABF1A2FEFB3007DAA1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FB3ABE1A2FEFB3007DAA1B /* main.m */; };
 		11FB3AC11A2FEFB3007DAA1B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11FB3AC01A2FEFB3007DAA1B /* Images.xcassets */; };
 		11FB3AC41A2FEFB3007DAA1B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11FB3AC21A2FEFB3007DAA1B /* MainMenu.xib */; };
 		11FB3AD01A2FEFB3007DAA1B /* CapslockFuckerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FB3ACF1A2FEFB3007DAA1B /* CapslockFuckerTests.m */; };
-		11FB3AE11A3420D0007DAA1B /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FB3AE01A3420D0007DAA1B /* App.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,16 +27,14 @@
 /* Begin PBXFileReference section */
 		11FB3AB61A2FEFB3007DAA1B /* CapslockFucker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapslockFucker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FB3ABA1A2FEFB3007DAA1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11FB3ABB1A2FEFB3007DAA1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		11FB3ABC1A2FEFB3007DAA1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		11FB3ABB1A2FEFB3007DAA1B /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		11FB3ABC1A2FEFB3007DAA1B /* Application.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
 		11FB3ABE1A2FEFB3007DAA1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		11FB3AC01A2FEFB3007DAA1B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		11FB3AC31A2FEFB3007DAA1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		11FB3AC91A2FEFB3007DAA1B /* CapslockFuckerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapslockFuckerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FB3ACE1A2FEFB3007DAA1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11FB3ACF1A2FEFB3007DAA1B /* CapslockFuckerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CapslockFuckerTests.m; sourceTree = "<group>"; };
-		11FB3ADF1A3420D0007DAA1B /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
-		11FB3AE01A3420D0007DAA1B /* App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +76,11 @@
 		11FB3AB81A2FEFB3007DAA1B /* CapslockFucker */ = {
 			isa = PBXGroup;
 			children = (
-				11FB3ABB1A2FEFB3007DAA1B /* AppDelegate.h */,
-				11FB3ABC1A2FEFB3007DAA1B /* AppDelegate.m */,
+				11FB3ABB1A2FEFB3007DAA1B /* Application.h */,
+				11FB3ABC1A2FEFB3007DAA1B /* Application.m */,
 				11FB3AC01A2FEFB3007DAA1B /* Images.xcassets */,
 				11FB3AC21A2FEFB3007DAA1B /* MainMenu.xib */,
 				11FB3AB91A2FEFB3007DAA1B /* Supporting Files */,
-				11FB3ADF1A3420D0007DAA1B /* App.h */,
-				11FB3AE01A3420D0007DAA1B /* App.m */,
 			);
 			path = CapslockFucker;
 			sourceTree = "<group>";
@@ -215,9 +210,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11FB3AE11A3420D0007DAA1B /* App.m in Sources */,
 				11FB3ABF1A2FEFB3007DAA1B /* main.m in Sources */,
-				11FB3ABD1A2FEFB3007DAA1B /* AppDelegate.m in Sources */,
+				11FB3ABD1A2FEFB3007DAA1B /* Application.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +398,7 @@
 				11FB3AD51A2FEFB3007DAA1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		11FB3AD61A2FEFB3007DAA1B /* Build configuration list for PBXNativeTarget "CapslockFuckerTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +407,7 @@
 				11FB3AD81A2FEFB3007DAA1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

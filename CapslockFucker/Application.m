@@ -6,19 +6,23 @@
 //  Copyright (c) 2014 revin. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "Application.h"
 
-@interface AppDelegate()
-@property (weak)IBOutlet NSWindow*window;
+@interface Application()
+@property NSWindow*window;
 @property pid_t pid;
 @property NSRunningApplication*rap;
 @end
 
-@implementation AppDelegate
--(BOOL)backToRAP{
-    if(!self.rap)return false;
-    [self.rap activateWithOptions:NSApplicationActivateAllWindows|NSApplicationActivateIgnoringOtherApps];
-    return true;
+@implementation Application
+-(void)finishLaunching{
+    self.delegate=self;
+    [super finishLaunching];
+    self.window=self.windows[0];
+    NSControl*v=[self.window contentView];
+    v=[v viewWithTag:0];
+    [v setTarget:self];
+    [v setAction:@selector(quitButtonPressed)];
 }
 -(void)someotherAppGotActivated:(NSNotification*)notification{
     NSDictionary*_n=[notification userInfo];if(_n==nil)return;
@@ -37,13 +41,18 @@
     TransformProcessType(&psn,kProcessTransformToForegroundApplication);
     [self.window makeKeyAndOrderFront:nil];
 }
--(IBAction)buttonTapped:(NSButton*)sender
-{
+-(void)quitButtonPressed{
     [NSApp terminate:self];
 }
 -(void)applicationDidResignActive:(NSNotification*)notification{
     ProcessSerialNumber psn={0,kCurrentProcess};
     TransformProcessType(&psn,kProcessTransformToUIElementApplication);
+}
+-(void)sendEvent:(NSEvent*)ev{
+    [super sendEvent:ev];
+    if(NSFlagsChanged!=[ev type]||[NSEvent modifierFlags])return;
+    if(!self.rap)AudioServicesPlayAlertSound(kSystemSoundID_UserPreferredAlert);
+    else [self.rap activateWithOptions:NSApplicationActivateAllWindows|NSApplicationActivateIgnoringOtherApps];
 }
 -(void)applicationDidFinishLaunching:(NSNotification*)notification{
     if(!AXIsProcessTrusted()){
@@ -60,10 +69,11 @@
         NSNotificationCenter*ncc=[[NSWorkspace sharedWorkspace]notificationCenter];
         [ncc addObserver:self selector:@selector(someotherAppGotActivated:) name:NSWorkspaceDidActivateApplicationNotification object:nil];
         [NSEvent addGlobalMonitorForEventsMatchingMask:NSFlagsChangedMask handler:^(NSEvent*ev){
-            if([ev modifierFlags]&NSAlphaShiftKeyMask&&self.rap){
-                [NSApp activateIgnoringOtherApps:true];
+            if(!self.rap)return;
+            if([ev modifierFlags]&NSAlphaShiftKeyMask){
                 [self.window center];
-            }
+                [NSApp activateIgnoringOtherApps:true];
+            }else [self.rap activateWithOptions:NSApplicationActivateAllWindows|NSApplicationActivateIgnoringOtherApps];
         }];
     }
 }

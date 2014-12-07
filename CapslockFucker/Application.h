@@ -7,8 +7,9 @@
 //
 
 #import <AppKit/AppKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
--(BOOL)backToRAP;
+@interface Application:NSApplication<NSApplicationDelegate>
+
 @end
 
