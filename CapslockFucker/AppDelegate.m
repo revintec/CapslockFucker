@@ -60,7 +60,6 @@
         NSNotificationCenter*ncc=[[NSWorkspace sharedWorkspace]notificationCenter];
         [ncc addObserver:self selector:@selector(someotherAppGotActivated:) name:NSWorkspaceDidActivateApplicationNotification object:nil];
         [NSEvent addGlobalMonitorForEventsMatchingMask:NSFlagsChangedMask handler:^(NSEvent*ev){
-            printf("%lx\n",(long)self.rap);
             if([ev modifierFlags]&NSAlphaShiftKeyMask&&self.rap){
                 [NSApp activateIgnoringOtherApps:true];
                 [self.window center];
