@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11FB3ABD1A2FEFB3007DAA1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FB3ABC1A2FEFB3007DAA1B /* AppDelegate.m */; };
+		11FB3ABF1A2FEFB3007DAA1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FB3ABE1A2FEFB3007DAA1B /* main.m */; };
+		11FB3AC11A2FEFB3007DAA1B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11FB3AC01A2FEFB3007DAA1B /* Images.xcassets */; };
+		11FB3AC41A2FEFB3007DAA1B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11FB3AC21A2FEFB3007DAA1B /* MainMenu.xib */; };
+		11FB3AD01A2FEFB3007DAA1B /* CapslockFuckerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FB3ACF1A2FEFB3007DAA1B /* CapslockFuckerTests.m */; };
+		11FB3AE11A3420D0007DAA1B /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FB3AE01A3420D0007DAA1B /* App.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11FB3ACA1A2FEFB3007DAA1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11FB3AAE1A2FEFB3007DAA1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11FB3AB51A2FEFB3007DAA1B;
+			remoteInfo = CapslockFucker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11FB3AB61A2FEFB3007DAA1B /* CapslockFucker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapslockFucker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11FB3ABA1A2FEFB3007DAA1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11FB3ABB1A2FEFB3007DAA1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		11FB3ABC1A2FEFB3007DAA1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		11FB3ABE1A2FEFB3007DAA1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		11FB3AC01A2FEFB3007DAA1B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		11FB3AC31A2FEFB3007DAA1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		11FB3AC91A2FEFB3007DAA1B /* CapslockFuckerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapslockFuckerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11FB3ACE1A2FEFB3007DAA1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11FB3ACF1A2FEFB3007DAA1B /* CapslockFuckerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CapslockFuckerTests.m; sourceTree = "<group>"; };
+		11FB3ADF1A3420D0007DAA1B /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
+		11FB3AE01A3420D0007DAA1B /* App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11FB3AB31A2FEFB3007DAA1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11FB3AC61A2FEFB3007DAA1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11FB3AAD1A2FEFB3007DAA1B = {
+			isa = PBXGroup;
+			children = (
+				11FB3AB81A2FEFB3007DAA1B /* CapslockFucker */,
+				11FB3ACC1A2FEFB3007DAA1B /* CapslockFuckerTests */,
+				11FB3AB71A2FEFB3007DAA1B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		11FB3AB71A2FEFB3007DAA1B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11FB3AB61A2FEFB3007DAA1B /* CapslockFucker.app */,
+				11FB3AC91A2FEFB3007DAA1B /* CapslockFuckerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11FB3AB81A2FEFB3007DAA1B /* CapslockFucker */ = {
+			isa = PBXGroup;
+			children = (
+				11FB3ABB1A2FEFB3007DAA1B /* AppDelegate.h */,
+				11FB3ABC1A2FEFB3007DAA1B /* AppDelegate.m */,
+				11FB3AC01A2FEFB3007DAA1B /* Images.xcassets */,
+				11FB3AC21A2FEFB3007DAA1B /* MainMenu.xib */,
+				11FB3AB91A2FEFB3007DAA1B /* Supporting Files */,
+				11FB3ADF1A3420D0007DAA1B /* App.h */,
+				11FB3AE01A3420D0007DAA1B /* App.m */,
+			);
+			path = CapslockFucker;
+			sourceTree = "<group>";
+		};
+		11FB3AB91A2FEFB3007DAA1B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				11FB3ABA1A2FEFB3007DAA1B /* Info.plist */,
+				11FB3ABE1A2FEFB3007DAA1B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11FB3ACC1A2FEFB3007DAA1B /* CapslockFuckerTests */ = {
+			isa = PBXGroup;
+			children = (
+				11FB3ACF1A2FEFB3007DAA1B /* CapslockFuckerTests.m */,
+				11FB3ACD1A2FEFB3007DAA1B /* Supporting Files */,
+			);
+			path = CapslockFuckerTests;
+			sourceTree = "<group>";
+		};
+		11FB3ACD1A2FEFB3007DAA1B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				11FB3ACE1A2FEFB3007DAA1B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11FB3AB51A2FEFB3007DAA1B /* CapslockFucker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11FB3AD31A2FEFB3007DAA1B /* Build configuration list for PBXNativeTarget "CapslockFucker" */;
+			buildPhases = (
+				11FB3AB21A2FEFB3007DAA1B /* Sources */,
+				11FB3AB31A2FEFB3007DAA1B /* Frameworks */,
+				11FB3AB41A2FEFB3007DAA1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CapslockFucker;
+			productName = CapslockFucker;
+			productReference = 11FB3AB61A2FEFB3007DAA1B /* CapslockFucker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		11FB3AC81A2FEFB3007DAA1B /* CapslockFuckerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11FB3AD61A2FEFB3007DAA1B /* Build configuration list for PBXNativeTarget "CapslockFuckerTests" */;
+			buildPhases = (
+				11FB3AC51A2FEFB3007DAA1B /* Sources */,
+				11FB3AC61A2FEFB3007DAA1B /* Frameworks */,
+				11FB3AC71A2FEFB3007DAA1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11FB3ACB1A2FEFB3007DAA1B /* PBXTargetDependency */,
+			);
+			name = CapslockFuckerTests;
+			productName = CapslockFuckerTests;
+			productReference = 11FB3AC91A2FEFB3007DAA1B /* CapslockFuckerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11FB3AAE1A2FEFB3007DAA1B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = revin;
+				TargetAttributes = {
+					11FB3AB51A2FEFB3007DAA1B = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					11FB3AC81A2FEFB3007DAA1B = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 11FB3AB51A2FEFB3007DAA1B;
+					};
+				};
+			};
+			buildConfigurationList = 11FB3AB11A2FEFB3007DAA1B /* Build configuration list for PBXProject "CapslockFucker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11FB3AAD1A2FEFB3007DAA1B;
+			productRefGroup = 11FB3AB71A2FEFB3007DAA1B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11FB3AB51A2FEFB3007DAA1B /* CapslockFucker */,
+				11FB3AC81A2FEFB3007DAA1B /* CapslockFuckerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11FB3AB41A2FEFB3007DAA1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11FB3AC11A2FEFB3007DAA1B /* Images.xcassets in Resources */,
+				11FB3AC41A2FEFB3007DAA1B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11FB3AC71A2FEFB3007DAA1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11FB3AB21A2FEFB3007DAA1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11FB3AE11A3420D0007DAA1B /* App.m in Sources */,
+				11FB3ABF1A2FEFB3007DAA1B /* main.m in Sources */,
+				11FB3ABD1A2FEFB3007DAA1B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11FB3AC51A2FEFB3007DAA1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11FB3AD01A2FEFB3007DAA1B /* CapslockFuckerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11FB3ACB1A2FEFB3007DAA1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11FB3AB51A2FEFB3007DAA1B /* CapslockFucker */;
+			targetProxy = 11FB3ACA1A2FEFB3007DAA1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		11FB3AC21A2FEFB3007DAA1B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11FB3AC31A2FEFB3007DAA1B /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11FB3AD11A2FEFB3007DAA1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		11FB3AD21A2FEFB3007DAA1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		11FB3AD41A2FEFB3007DAA1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CapslockFucker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		11FB3AD51A2FEFB3007DAA1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CapslockFucker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		11FB3AD71A2FEFB3007DAA1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CapslockFuckerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CapslockFucker.app/Contents/MacOS/CapslockFucker";
+			};
+			name = Debug;
+		};
+		11FB3AD81A2FEFB3007DAA1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CapslockFuckerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CapslockFucker.app/Contents/MacOS/CapslockFucker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11FB3AB11A2FEFB3007DAA1B /* Build configuration list for PBXProject "CapslockFucker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11FB3AD11A2FEFB3007DAA1B /* Debug */,
+				11FB3AD21A2FEFB3007DAA1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11FB3AD31A2FEFB3007DAA1B /* Build configuration list for PBXNativeTarget "CapslockFucker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11FB3AD41A2FEFB3007DAA1B /* Debug */,
+				11FB3AD51A2FEFB3007DAA1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		11FB3AD61A2FEFB3007DAA1B /* Build configuration list for PBXNativeTarget "CapslockFuckerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11FB3AD71A2FEFB3007DAA1B /* Debug */,
+				11FB3AD81A2FEFB3007DAA1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 11FB3AAE1A2FEFB3007DAA1B /* Project object */;
+}
