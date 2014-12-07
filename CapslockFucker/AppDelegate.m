@@ -9,31 +9,28 @@
 #import "AppDelegate.h"
 
 @interface AppDelegate()
-
 @property (weak)IBOutlet NSWindow*window;
-@property int activationIndicator;
+@property pid_t pid;
 @property NSRunningApplication*rap;
 @end
 
 @implementation AppDelegate
--(void)backToRAP{
-    if(!self.rap)return;
+-(BOOL)backToRAP{
+    if(!self.rap)return false;
     [self.rap activateWithOptions:NSApplicationActivateAllWindows|NSApplicationActivateIgnoringOtherApps];
-    self.rap=nil;
+    return true;
 }
 -(void)someotherAppGotActivated:(NSNotification*)notification{
-    if(self.activationIndicator){
-        --self.activationIndicator;
-        return;
-    }
     NSDictionary*_n=[notification userInfo];if(_n==nil)return;
     NSRunningApplication*ra=[_n objectForKey:NSWorkspaceApplicationKey];if(ra==nil)return;
-    NSString*name=[ra localizedName];
-    if(![@"IntelliJ IDEA" isEqual:name]||![NSEvent modifierFlags])return;
-    self.rap=ra;
+    if(![@"IntelliJ IDEA" isEqual:[ra localizedName]]){
+        if([ra processIdentifier]!=self.pid)
+            self.rap=nil;
+        return;
+    }else self.rap=ra;
+    if(![NSEvent modifierFlags])return;
     [NSApp performSelector:@selector(activateIgnoringOtherApps:) withObject:@YES afterDelay:0.3];
     [self.window center];
-    self.activationIndicator=2; // one for our self, one for whatever got activated next
 }
 -(void)applicationWillBecomeActive:(NSNotification*)notification{
     ProcessSerialNumber psn={0,kCurrentProcess};
@@ -49,8 +46,27 @@
     TransformProcessType(&psn,kProcessTransformToUIElementApplication);
 }
 -(void)applicationDidFinishLaunching:(NSNotification*)notification{
-    NSNotificationCenter*ncc=[[NSWorkspace sharedWorkspace]notificationCenter];
-    [ncc addObserver:self selector:@selector(someotherAppGotActivated:) name:NSWorkspaceDidActivateApplicationNotification object:nil];
+    if(!AXIsProcessTrusted()){
+        [self.window close];
+        NSAlert*alert=[[NSAlert alloc]init];
+        [alert addButtonWithTitle:@"Quit"];
+        [alert setMessageText:@"Can't acquire Accessibility Permissions"];
+        [alert setInformativeText:@"Click Quit to quit"];
+        [alert setAlertStyle:NSCriticalAlertStyle];
+        [alert runModal];
+        [NSApp terminate:self];
+    }else{
+        self.pid=getpid();
+        NSNotificationCenter*ncc=[[NSWorkspace sharedWorkspace]notificationCenter];
+        [ncc addObserver:self selector:@selector(someotherAppGotActivated:) name:NSWorkspaceDidActivateApplicationNotification object:nil];
+        [NSEvent addGlobalMonitorForEventsMatchingMask:NSFlagsChangedMask handler:^(NSEvent*ev){
+            printf("%lx\n",(long)self.rap);
+            if([ev modifierFlags]&NSAlphaShiftKeyMask&&self.rap){
+                [NSApp activateIgnoringOtherApps:true];
+                [self.window center];
+            }
+        }];
+    }
 }
 -(void)applicationWillTerminate:(NSNotification*)notification{
     // Insert code here to tear down your application

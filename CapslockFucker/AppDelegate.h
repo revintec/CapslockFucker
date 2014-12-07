@@ -9,6 +9,6 @@
 #import <AppKit/AppKit.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
--(void)backToRAP;
+-(BOOL)backToRAP;
 @end
 
