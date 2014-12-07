@@ -8,9 +8,10 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+@interface AppDelegate()
 
-@property (weak) IBOutlet NSWindow *window;
+@property (weak)IBOutlet NSWindow*window;
+@property int activationIndicator;
 @property NSRunningApplication*rap;
 @end
 
@@ -21,6 +22,10 @@
     self.rap=nil;
 }
 -(void)someotherAppGotActivated:(NSNotification*)notification{
+    if(self.activationIndicator){
+        --self.activationIndicator;
+        return;
+    }
     NSDictionary*_n=[notification userInfo];if(_n==nil)return;
     NSRunningApplication*ra=[_n objectForKey:NSWorkspaceApplicationKey];if(ra==nil)return;
     NSString*name=[ra localizedName];
@@ -28,6 +33,7 @@
     self.rap=ra;
     [NSApp performSelector:@selector(activateIgnoringOtherApps:) withObject:@YES afterDelay:0.3];
     [self.window center];
+    self.activationIndicator=2; // one for our self, one for whatever got activated next
 }
 -(void)applicationWillBecomeActive:(NSNotification*)notification{
     ProcessSerialNumber psn={0,kCurrentProcess};
@@ -45,7 +51,6 @@
 -(void)applicationDidFinishLaunching:(NSNotification*)notification{
     NSNotificationCenter*ncc=[[NSWorkspace sharedWorkspace]notificationCenter];
     [ncc addObserver:self selector:@selector(someotherAppGotActivated:) name:NSWorkspaceDidActivateApplicationNotification object:nil];
-//    [self.window keyUp:<#(NSEvent *)#>]
 }
 -(void)applicationWillTerminate:(NSNotification*)notification{
     // Insert code here to tear down your application
