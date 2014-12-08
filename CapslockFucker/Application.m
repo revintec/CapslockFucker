@@ -59,8 +59,8 @@
         [self.window close];
         NSAlert*alert=[[NSAlert alloc]init];
         [alert addButtonWithTitle:@"Quit"];
-        [alert setMessageText:@"Can't acquire Accessibility Permissions"];
-        [alert setInformativeText:@"Click Quit to quit"];
+        [alert setMessageText:@"CapslockFucker"];
+        [alert setInformativeText:@"Can't acquire Accessibility Permissions"];
         [alert setAlertStyle:NSCriticalAlertStyle];
         [alert runModal];
         [NSApp terminate:self];
